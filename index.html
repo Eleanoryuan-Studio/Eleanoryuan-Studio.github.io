@@ -45,16 +45,36 @@
             <!-- 以后你有图片了，可以把图片放在这个位置 -->
         </div>
 
-              <div class="section" style="text-align: center;">
+                     <div class="section" style="text-align: center;">
             <h3>Let's Work Together</h3>
             <p>Currently available for remote design and sourcing projects.</p>
             
             <div style="margin-top: 20px; margin-bottom: 20px;">
-                <p style="font-size: 1.1em;">📧 Email: <strong>rurora_2024@zohomail.cn</strong></p>
+                <p style="font-size: 1.1em;">📧 Email: <strong id="email-text">ururuoa_2024@zohomail.cn</strong></p>
                 <p style="font-size: 1.1em;">💬 WhatsApp: <strong>+86 18112958665</strong></p>
             </div>
             
-            <a href="mailto:your-email@gmail.com" class="btn">Send an Email</a>
+            <button onclick="copyEmail()" class="btn" id="copy-btn" style="border: none; cursor: pointer;">Copy Email Address</button>
+            <p style="font-size: 0.8em; color: #888; margin-top: 10px;">Or click to open your default mail app: <a href="mailto:ururuoa_2024@zohomail.cn" style="color: #b24261;">ururuoa_2024@zohomail.cn</a></p>
+        </div>
+    </div> <!-- 这里是原本 container 的闭合标签 -->
+
+    <script>
+        function copyEmail() {
+            var email = "ururuoa_2024@zohomail.cn";
+            navigator.clipboard.writeText(email).then(function() {
+                var btn = document.getElementById("copy-btn");
+                btn.innerText = "Copied! ✔";
+                btn.style.backgroundColor = "#4CAF50";
+                setTimeout(function() {
+                    btn.innerText = "Copy Email Address";
+                    btn.style.backgroundColor = "#b24261";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
         </div>
     </div>
 </body>
